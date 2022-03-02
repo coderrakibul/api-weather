@@ -13,4 +13,10 @@ const displayWeather = (weather) => {
    document.getElementById("city-temp").innerText = `${weather.main.temp}`;
    document.getElementById("weather-type").innerText = `${weather.weather[0].main}`;
 
+
+   //set weather icon
+   const url = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
+   const weatherIcon = document.getElementById("weather-icon");
+   weatherIcon.setAttribute("src", url)
+   console.log(url)
 }
